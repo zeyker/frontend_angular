@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "angular-eve-resource": "dailymotion/angular-eve-resource"
+  },
   "devDependencies": {
     "bower": "^1.6.5",
     "del": "^2.0.2",

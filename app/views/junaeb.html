@@ -3,7 +3,7 @@
   
 
 
-  <marker ng-repeat="pos in positions" position="{{pos.latPub}}, {{pos.lonPub}}" id="{{pos.publicacionId}}" on-click="showCity(event, pos)" title="{{pos.nombrePub}}">
+  <marker ng-repeat="pos in positions | filter: { pagoPub: 'Junaeb y redcompra' }" position="{{pos.latPub}}, {{pos.lonPub}}" id="{{pos.publicacionId}}" on-click="showCity(event, pos)" title="{{pos.nombrePub}}">
 
 
   	    <info-window id="myInfoWindow" >

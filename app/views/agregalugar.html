@@ -1,0 +1,91 @@
+<div ng-app="angularSpa"> 
+
+ <ng-map center="-33.450217,-70.687195" zoom="17" on-click="getpos($event)">
+      <marker position="{{latlng}}" title="Hello World!" on-dragend="getpos($event)" 
+        animation="DROP" draggable="true"></marker>
+    </ng-map>
+     <div style="position:absolute; top:600px;">
+
+    </div>
+  </div>
+
+
+ <div style="position:absolute; top:180px;">
+
+
+  
+
+
+<h1>Agregar Lugar</h1>
+
+ <div style="position:absolute; top:400px;">
+    <form novalidate="novalidate" class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="inputNombre">Nombre:</label>
+            <div class="controls">
+                <input type="text" ng-model="newnombre"/>
+            </div>
+       
+       
+        <div class="control-group">
+            <label class="control-label" for="inputMail">descripcion:</label>
+            <div class="controls">
+                <input type="text"  ng-model="newdescripcion"/>
+            </div>
+        </div>
+
+          <label for="singleSelect"> valoracion: </label><br>
+    <select name="singleSelect" ng-model="newvaloracion">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select><br>
+
+ <label for="singleSelect"> Medio de pago: </label><br>
+    <select name="singleSelect" ng-model="newpago">
+      <option value="Junaeb y redcompra">Junaeb y redcompra</option>
+      <option value="solo efectivo">solo efectivo</option>
+      <option value="No hay info">no hay info</option>
+     
+    </select><br>
+        
+
+        <div class="control-group">
+            <label class="control-label" for="inputContraa">codigo:</label>
+            <div class="controls">
+                <input type="text"  ng-model="newcodigo"/>
+            </div>
+        </div>
+
+     <label for="singleSelect"> Tipo de lugar: </label><br>
+    <select name="singleSelect" ng-model="newtipo">
+      <option value="1">Quiosco</option>
+      <option value="2">Baño</option>
+      <option value="3">Monumento</option>
+     
+    </select><br>
+
+
+        
+        
+
+
+
+
+        <div class="control-group">
+            <div class="controls">
+              <!-- user-detail.html: -->
+              
+               <div style="position:absolute; top:400px;">
+
+              <!-- user-creation.html: -->
+                <a ng-click=  "logPost()" class="btn btn-small btn-primary"  >Agregar</a>
+              
+                
+            </div>
+        </div>
+    </form>
+ </div>
+</div>

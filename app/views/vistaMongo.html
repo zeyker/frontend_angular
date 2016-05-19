@@ -1,0 +1,47 @@
+<div ng-app="angularSpa"> 
+
+ <div style="position:absolute; top:180px;">
+
+
+  
+
+
+<h1>Mongolico</h1>
+<div ng-controller="agregaMongo as up">
+    <form novalidate="novalidate" class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="inputNombre">Nombre:</label>
+            <div class="controls">
+                <input type="text" ng-model="newNombre"/>
+            </div>
+       
+       
+        <div class="control-group">
+            <label class="control-label" for="inputMail">mail:</label>
+            <div class="controls">
+                <input type="text"  ng-model="newMail"/>
+            </div>
+        </div>
+
+       
+        
+        
+
+
+
+
+        <div class="control-group">
+            <div class="controls">
+              <!-- user-detail.html: -->
+              
+               <div style="position:absolute; top:230px;">
+
+              <!-- user-creation.html: -->
+                <a ng-click=  "logPost()" class="btn btn-small btn-primary" href="#/home" >Agregar</a>
+              
+                
+            </div>
+        </div>
+    </form>
+ </div>
+</div>
