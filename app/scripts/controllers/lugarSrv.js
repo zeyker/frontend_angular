@@ -7,6 +7,14 @@ angular.module('angularSpa')
         };
     });
 
+angular.module('angularSpa')
+    .service('detalleService', function($http){
+        var urlBase = 'http://localhost:8080/sakila-backend-master/publicaciones/';
+        this.getActorsId = function(actorId){
+            return $http.get(urlBase+actorId);
+        };
+    });    
+
 
 
 angular.module('angularSpa')
@@ -21,12 +29,15 @@ angular.module('angularSpa')
             data: {
                     nombrePub: nombre , 
   					descripcionPub:descripcion,  
-    				valoracionPub:valoracion, 
+    				
       				codigoPub :codigo, 
         			tipoPublicacionPub:tipo, 
           			latPub:lat,  
             		lonPub:lon,  
-               		pagoPub:pago
+               		pagoPub:pago,
+                    sumavalPub:0,
+                    cantidavalPub:0,
+                    valoracionPub:0
                     },
             headers: {'Content-Type': 'application/json'}
             });
@@ -35,4 +46,29 @@ angular.module('angularSpa')
 
 
     });    
+angular.module('angularSpa')
+    .service('agregaValoracionservice', function($http){
+       
 
+        this.addPost = function(idUser,idPub,Valoracion){
+           console.log(idPub);
+           console.log(Valoracion);
+              var request = $http({
+            method: "POST",
+            url: "http://localhost:8080/sakila-backend-master/valoraciones",
+            data: {
+                    userId: idUser, 
+                    publicacionId:idPub,  
+                    valoracion:Valoracion
+
+
+
+                    
+                    },
+            headers: {'Content-Type': 'application/json'}
+            });
+            return ( request);
+        };
+
+
+    });    

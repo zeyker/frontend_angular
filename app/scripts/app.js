@@ -25,6 +25,10 @@
             templateUrl: 'views/junaeb.html',
             controller: 'AboutCtrl'
           })
+        .when('/valorar/:publicacionId/', {
+            templateUrl: 'views/valorar.html',
+            controller: 'valoracionCtrl'
+          })
         .otherwise({
             redirectTo: '/home'
           });

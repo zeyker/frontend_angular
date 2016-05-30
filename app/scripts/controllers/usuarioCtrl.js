@@ -54,7 +54,7 @@
                 )
 
             .success(function(data){
-               
+              window.alert("Usuario registrado correctamente"); 
             })
             .error(function(error){
                 $scope.status = 'Error al consultar por usuarios';
