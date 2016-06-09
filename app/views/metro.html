@@ -1,0 +1,33 @@
+<div >
+  <map center="-33.450217,-70.687195" zoom="17">
+  
+
+
+  <marker ng-repeat="pos in positions" position="{{pos.latPub}}, {{pos.lonPub}}" id="{{pos.publicacionId}}" on-click="showCity(event, pos)" title="{{pos.nombrePub}}">
+
+
+  	    <info-window id="myInfoWindow" >
+      <div ng-non-bindable>
+      
+                <h4 style="color:blue;">{{selectedCity.nombrePub}}</h4>
+
+        <h4 style="color:blue;">{{selectedCity.pagoPub}}</h4>
+        <h4 style="color:blue;">{{selectedCity.descripcionPub}}</h4>
+                <h4 style="color:blue;">{{selectedCity.TipoPublicacionPub}}</h4>
+
+     
+
+  <li>
+    <a href="#/valorar/{{selectedCity.pubId}}/"> Valorar</a>
+  </li>
+
+      </div> 
+    </info-window>
+     <shape id="circle" name="circle" centered="true"
+      stroke-color='#FF0000' stroke-opacity="0.8"stroke-weight="2"
+      center="current-position" radius="100" editable="true" ></shape>
+  </map>
+       <div style="position:absolute; top:400px;">
+
+                <a ng-click=  "between()" class="btn btn-small btn-primary"  >Agregar</a>
+</div>

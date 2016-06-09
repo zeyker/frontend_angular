@@ -1,0 +1,12 @@
+
+<div ng-app="angularSpa"> 
+
+  
+    <ng-map center="-33.450217,-70.687195" zoom="15" on-click="getpos($event)">
+      <marker position="{{latlng}}" title="Hello World!" on-dragend="getpos($event)" 
+        animation="DROP" draggable="true"></marker>
+    </ng-map>
+     <div style="position:absolute; top:600px;">
+    {{latlng}}
+    </div>
+  </div>

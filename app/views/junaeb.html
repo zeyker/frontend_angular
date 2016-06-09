@@ -1,0 +1,29 @@
+<div >
+  <map center="-33.450217,-70.687195" zoom="17">
+  
+
+
+  <marker ng-repeat="pos in positions | filter: { pagoPub: 'Junaeb y redcompra' }" position="{{pos.latPub}}, {{pos.lonPub}}" id="{{pos.publicacionId}}" on-click="showCity(event, pos)" title="{{pos.nombrePub}}">
+
+
+  	    <info-window id="myInfoWindow" >
+      <div ng-non-bindable>
+        <h4 style="color:blue;">{{selectedCity.nombrePub}}</h4>
+        <h4 style="color:blue;">{{selectedCity.pagoPub}}</h4>
+        <h4 style="color:blue;">{{selectedCity.descripcionPub}}</h4>
+                <h4 style="color:blue;">{{selectedCity.TipoPublicacionPub}}</h4>
+
+            <label for="singleSelect"> valoracion: </label><br>
+    <select name="singleSelect" ng-model="newvaloracion">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      
+    </select><br>
+
+      </div> 
+    </info-window>
+  </map>
+</div>

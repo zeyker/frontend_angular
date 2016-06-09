@@ -1,0 +1,30 @@
+
+
+
+<p>Nombre = {{actor.nombrePub}} </p>
+<p>Tipo de pago= {{actor.pagoPub}}</p>
+<p> valoracion= {{actor.valoracionPub}}</p>
+<p> valoracion= {{actor.pubId}}</p>
+            <label for="singleSelect"> valoracion: </label><br>
+     <select name="singleSelect" ng-model="newvaloracion">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      
+    </select><br>
+
+  Comentario:<br />
+  <textarea name='comment' id='comment'ng-model='comment' ></textarea><br />
+    <a ng-click=  "logPost()" class="btn btn-small btn-primary"  >Agregar</a>
+
+ <h1>Comentarios</h1>   
+<ul ng-repeat="val in vals | filter: { publicacionId: actor.pubId}">
+	 <div class="form-group">
+  <label for="comment">fecha :{{val.fecha}}</label>
+  <textarea class="form-control" rows="1" id="comment">{{val.texto}}</textarea>
+
+
+	
+</div>
